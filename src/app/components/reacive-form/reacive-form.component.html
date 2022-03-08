@@ -1,0 +1,19 @@
+<div class="content">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" id="name" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="email">Email:</label>
+            <input type="text" formControlName="email" id="email" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="password">Password:</label>
+            <input type="text" formControlName="password" id="password" class="form-control">
+        </div>
+        <div class="form-group mb-4">
+            <button class="btn btn-outline-primary" [disabled]="!registerForm.valid">Register</button>
+        </div>
+    </form>
+</div>
